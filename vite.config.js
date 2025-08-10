@@ -33,10 +33,10 @@ export default defineConfig({
   plugins: [
     PLUGINS
   ],
-  base: PUBLIC_PATH,
-  build: {
-    outDir: OUT_DIR
-  },
+  base: '/',  // 固定为根路径，解决"base should start with a slash"警告
+build: {
+  outDir: 'dist'  // 明确输出目录为'dist'（也可以是'build'，后续Vercel需要对应这个名称）
+},
   resolve: {
     alias: [
       {
