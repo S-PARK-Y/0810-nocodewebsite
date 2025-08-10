@@ -1,0 +1,118 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  :root {
+    --background: 43 100% 96%;
+    --foreground: 30 20% 25%;
+
+    --card: 0 0% 100%;
+    --card-foreground: 30 20% 25%;
+
+    --popover: 0 0% 100%;
+    --popover-foreground: 30 20% 25%;
+
+    --primary: 30 20% 25%;
+    --primary-foreground: 43 100% 96%;
+
+    --secondary: 25 30% 50%;
+    --secondary-foreground: 43 100% 96%;
+
+    --muted: 30 20% 25%;
+    --muted-foreground: 30 20% 25%;
+
+    --accent: 30 20% 25%;
+    --accent-foreground: 43 100% 96%;
+
+    --destructive: 0 100% 50%;
+    --destructive-foreground: 0 0% 0%;
+
+    --border: 30 20% 25%;
+    --input: 30 20% 25%;
+    --ring: 30 20% 25%;
+
+    --radius: 0.5rem;
+  }
+
+  .dark {
+    --background: 30 20% 25%;
+    --foreground: 43 100% 96%;
+
+    --card: 30 20% 25%;
+    --card-foreground: 43 100% 96%;
+
+    --popover: 30 20% 25%;
+    --popover-foreground: 43 100% 96%;
+
+    --primary: 43 100% 96%;
+    --primary-foreground: 30 20% 25%;
+
+    --secondary: 25 30% 50%;
+    --secondary-foreground: 43 100% 96%;
+
+    --muted: 43 100% 96%;
+    --muted-foreground: 43 100% 96%;
+
+    --accent: 43 100% 96%;
+    --accent-foreground: 30 20% 25%;
+
+    --destructive: 0 100% 50%;
+    --destructive-foreground: 0 0% 0%;
+
+    --border: 43 100% 96%;
+    --input: 43 100% 96%;
+    --ring: 43 100% 96%;
+  }
+}
+
+@layer base {
+  * {
+    @apply border-border;
+  }
+  body {
+    @apply bg-background text-foreground;
+  }
+}
+
+@layer utilities {
+  .animate-fadeIn {
+    animation: fadeIn 0.5s ease-in-out;
+  }
+  
+  @keyframes fadeIn {
+    from {
+      opacity: 0;
+      transform: translateY(20px);
+    }
+    to {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+
+  .animate-pulse-slow {
+    animation: pulse 3s cubic-bezier(0.4, 0, 0.6, 1) infinite;
+  }
+
+  @keyframes pulse {
+    0%, 100% {
+      opacity: 1;
+    }
+    50% {
+      opacity: 0.7;
+    }
+  }
+
+  .glow-amber {
+    box-shadow: 0 0 10px rgba(217, 119, 6, 0.5);
+  }
+
+  .glow-orange {
+    box-shadow: 0 0 10px rgba(234, 88, 12, 0.5);
+  }
+
+  .glow-yellow {
+    box-shadow: 0 0 10px rgba(202, 138, 4, 0.5);
+  }
+}
